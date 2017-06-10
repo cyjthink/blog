@@ -1,18 +1,9 @@
 
 ### 2017 TODO
 
-#### android实现
-1. [x] 自定义卡券
-2. [x] 折线图
-3. [x] 圆形头像
-4. [x] 通过动画改变button宽度
-5. [x] 字体描边
-
 #### 读书笔记
-1. [ ] 深入理解Java虚拟机
-2. [ ] 鸟哥的Linux私房菜
-3. [ ] Android开发艺术探究
-4. [ ] 贾题韬讲坛经
-
-#### 查漏补缺
-1. [ ] 数据结构Java实现
+1. 深入理解Java虚拟机
+2. 鸟哥的Linux私房菜
+3. Android开发艺术探究 ![progress](http://progressed.io/bar/50)
+4. 贾题韬讲坛经 ![progress](http://progressed.io/bar/10)
+5. Clean Code ![progress](http://progressed.io/bar/10)
