@@ -183,6 +183,5 @@
             app:fill_color="#ffce42"
             app:stroke_width="8dp"
             android:layout_gravity="center_horizontal"/>
-
     </LinearLayout>
 </ScrollView>
