@@ -2,9 +2,9 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion '26'
+    buildToolsVersion "25.0.3"
     defaultConfig {
-        applicationId "com.cyjthink.customviews"
+        applicationId "com.example.cyj.featuresdemo"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
@@ -17,9 +17,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-	sourceSets {
+    sourceSets {
         main {
             res.srcDirs = [
+                    'src/main/res/gallery',
+                    'src/main/res/gift',
                     'src/main/res/main',
                     'src/main/res/resource',
                     'src/main/res']
@@ -34,6 +36,8 @@ dependencies {
     })
 
     compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+
     compile 'com.jakewharton:butterknife:8.5.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="white_trans50">#7fffffff</color>
+
+    <color name="chrome_green">#4db649</color>
+    <color name="chrome_red">#e03633</color>
+    <color name="chrome_yellow">#fad10a</color>
+    <color name="chrome_blue">#4285c5</color>
+</resources>
