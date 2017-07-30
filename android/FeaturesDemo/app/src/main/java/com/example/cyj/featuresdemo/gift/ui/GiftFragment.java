@@ -15,6 +15,7 @@ import com.example.cyj.featuresdemo.R;
 import com.example.cyj.featuresdemo.Constants;
 import com.example.cyj.featuresdemo.gift.adapter.GiftAdapter;
 import com.example.cyj.featuresdemo.gift.entity.GiftEntity;
+import com.example.cyj.featuresdemo.gift.entity.SendGiftModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +37,7 @@ public class GiftFragment extends Fragment {
 
     private int mCurrPage;
 
-    private List<GiftEntity> mGiftEntityList = new ArrayList<>();
+    private List<SendGiftModel> mSendGiftModelList = new ArrayList<>();
 
     private GiftAdapter mAdapter;
 
@@ -74,7 +75,7 @@ public class GiftFragment extends Fragment {
     }
 
     private void initView() {
-        mAdapter = new GiftAdapter(getContext(), mGiftEntityList);
+        mAdapter = new GiftAdapter(getContext(), mSendGiftModelList);
         mManager = new GridLayoutManager(getContext(), 4);
         recGift.setAdapter(mAdapter);
         recGift.setLayoutManager(mManager);
@@ -90,13 +91,13 @@ public class GiftFragment extends Fragment {
     }
 
     public void clearSelect(int pos, boolean isSelecte) {
-        mGiftEntityList.get(pos).setSelect(isSelecte);
+        mSendGiftModelList.get(pos).setSelect(isSelecte);
         mAdapter.notifyDataSetChanged();
     }
 
     private void pickData(int position) {
         int last;
-        List<GiftEntity> data = ((SendGiftActivity) getActivity()).getmData();
+        List<SendGiftModel> data = ((SendGiftActivity) getActivity()).getmData();
 
         if (data.size() > (position + 1) * Constants.ITEM_COUNT) {
             last = (position + 1) * Constants.ITEM_COUNT;
@@ -104,7 +105,7 @@ public class GiftFragment extends Fragment {
             last = data.size();
         }
         for (int i = position * Constants.ITEM_COUNT; i < last; i++) {
-            mGiftEntityList.add(data.get(i));
+            mSendGiftModelList.add(data.get(i));
         }
     }
 

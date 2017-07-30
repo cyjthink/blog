@@ -4,32 +4,37 @@
     android:layout_height="match_parent">
 
     <ImageView
+        android:id="@+id/iv_send_gift"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_send_gift"
-        android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
-        android:id="@+id/iv_send_gift"/>
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_send_gift" />
 
-    <FrameLayout
-        android:id="@+id/fl_gift"
-        android:layout_width="100dp"
+    <com.example.cyj.featuresdemo.gift.view.GiftLayout
+        android:id="@+id/gift_layout_1"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_marginTop="100dp"
-        android:background="#e2e2e2"
-        android:visibility="invisible">
+        android:layout_marginTop="50dp"
+        android:visibility="invisible" />
 
-        <TextView
-            android:id="@+id/tv_num"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="15dp"
-            android:text="x1"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"
-            android:layout_gravity="center_vertical|right"/>
-    </FrameLayout>
+    <com.example.cyj.featuresdemo.gift.view.GiftLayout
+        android:id="@+id/gift_layout_2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/gift_layout_1"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible" />
 
-    <include layout="@layout/include_send_gift"
-        android:visibility="gone"/>
+    <com.example.cyj.featuresdemo.gift.view.GiftLayout
+        android:id="@+id/gift_layout_3"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/gift_layout_2"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible" />
+
+    <include
+        layout="@layout/include_send_gift"
+        android:visibility="gone" />
 </RelativeLayout>

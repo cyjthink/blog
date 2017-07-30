@@ -9,7 +9,7 @@ import android.util.SparseArray;
 import android.view.ViewGroup;
 
 import com.example.cyj.featuresdemo.Constants;
-import com.example.cyj.featuresdemo.gift.entity.GiftEntity;
+import com.example.cyj.featuresdemo.gift.entity.SendGiftModel;
 import com.example.cyj.featuresdemo.gift.ui.GiftFragment;
 import com.example.cyj.featuresdemo.gift.ui.SendGiftActivity;
 
@@ -22,7 +22,7 @@ import java.util.List;
 
 public class GiftPagerAdapter extends FragmentStatePagerAdapter {
 
-    private List<GiftEntity> mData;
+    private List<SendGiftModel> mData;
     private SparseArray<Fragment> mRegisteredFragments = new SparseArray<Fragment>();
 
     public GiftPagerAdapter(FragmentManager fm, Activity activity) {

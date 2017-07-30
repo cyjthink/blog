@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.cyj.featuresdemo.R;
 import com.example.cyj.featuresdemo.gift.entity.GiftEntity;
+import com.example.cyj.featuresdemo.gift.entity.SendGiftModel;
 
 import java.util.List;
 
@@ -24,11 +25,11 @@ import butterknife.OnClick;
 
 public class GiftAdapter extends RecyclerView.Adapter<GiftAdapter.ViewHolder> {
 
-    private List<GiftEntity> mGiftEntityList;
+    private List<SendGiftModel> mSendGiftModelList;
     private LayoutInflater mLayoutInflater;
 
-    public GiftAdapter(Context context, List<GiftEntity> giftEntityList) {
-        this.mGiftEntityList = giftEntityList;
+    public GiftAdapter(Context context, List<SendGiftModel> giftEntityList) {
+        this.mSendGiftModelList = giftEntityList;
         this.mLayoutInflater = LayoutInflater.from(context);
     }
 
@@ -40,7 +41,7 @@ public class GiftAdapter extends RecyclerView.Adapter<GiftAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        if (mGiftEntityList.get(position).isSelect()) {
+        if (mSendGiftModelList.get(position).isSelect()) {
             holder.ivSelectFlag.setVisibility(View.VISIBLE);
         } else {
             holder.ivSelectFlag.setVisibility(View.INVISIBLE);
@@ -50,7 +51,7 @@ public class GiftAdapter extends RecyclerView.Adapter<GiftAdapter.ViewHolder> {
 
     @Override
     public int getItemCount() {
-        return mGiftEntityList == null ? 0 : mGiftEntityList.size();
+        return mSendGiftModelList == null ? 0 : mSendGiftModelList.size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
