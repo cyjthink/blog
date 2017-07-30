@@ -121,6 +121,27 @@ public class GiftLayout extends FrameLayout {
     }
 
     /**
+     * 重复播放缩放礼物数量动画
+     * @param repeat
+     * @return
+     */
+    public ObjectAnimator playRepeatScaleTextAnimator(int repeat){
+        tvGiftNum.setText("x1");
+        ObjectAnimator scaleAnimator = scaleTextAnimator();
+        scaleAnimator.addListener(new AnimatorListenerAdapter() {
+            int start = 1;
+            @Override
+            public void onAnimationRepeat(Animator animation) {
+                super.onAnimationRepeat(animation);
+                start++;
+                tvGiftNum.setText("x" + start);
+            }
+        });
+        scaleAnimator.setRepeatCount(repeat - 1);
+        return scaleAnimator;
+    }
+
+    /**
      * 播放退出动画
      *
      * @return
