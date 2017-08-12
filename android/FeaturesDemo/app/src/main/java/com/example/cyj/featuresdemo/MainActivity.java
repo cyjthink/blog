@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.cyj.featuresdemo.broadcast.BroadcastActivity;
 import com.example.cyj.featuresdemo.gallery.GalleryActivity;
 import com.example.cyj.featuresdemo.gift.ui.SendGiftActivity;
 
@@ -19,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnSendGift;
     @BindView(R.id.btn_gallery)
     Button btnGallery;
+    @BindView(R.id.btn_broadcast)
+    Button btnBroadcast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    @OnClick({R.id.btn_send_gift, R.id.btn_gallery})
+    @OnClick({R.id.btn_send_gift, R.id.btn_gallery, R.id.btn_broadcast})
     public void onClick(View view) {
         Intent intent;
         switch (view.getId()) {
@@ -38,6 +41,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_gallery:
                 intent = new Intent(this, GalleryActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_broadcast:
+                intent = new Intent(this, BroadcastActivity.class);
                 startActivity(intent);
                 break;
         }

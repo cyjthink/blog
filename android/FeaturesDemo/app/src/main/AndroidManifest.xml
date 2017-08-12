@@ -19,6 +19,7 @@
 
         <activity android:name=".gift.ui.SendGiftActivity"/>
         <activity android:name=".gallery.GalleryActivity"/>
+        <activity android:name=".broadcast.BroadcastActivity"/>
     </application>
 
 </manifest>

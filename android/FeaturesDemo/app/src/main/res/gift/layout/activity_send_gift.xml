@@ -18,21 +18,21 @@
         android:layout_marginTop="50dp"
         android:visibility="invisible" />
 
-    <!--<com.example.cyj.featuresdemo.gift.view.GiftLayout-->
-        <!--android:id="@+id/gift_layout_2"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:layout_below="@id/gift_layout_1"-->
-        <!--android:layout_marginTop="10dp"-->
-        <!--android:visibility="invisible" />-->
+    <com.example.cyj.featuresdemo.gift.view.GiftLayout
+        android:id="@+id/gift_layout_2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/gift_layout_1"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible" />
 
-    <!--<com.example.cyj.featuresdemo.gift.view.GiftLayout-->
-        <!--android:id="@+id/gift_layout_3"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:layout_below="@id/gift_layout_2"-->
-        <!--android:layout_marginTop="10dp"-->
-        <!--android:visibility="invisible" />-->
+    <com.example.cyj.featuresdemo.gift.view.GiftLayout
+        android:id="@+id/gift_layout_3"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/gift_layout_2"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible" />
 
     <include
         layout="@layout/include_send_gift"

@@ -69,10 +69,10 @@ public class SendGiftActivity extends AppCompatActivity implements GiftFragment.
     LinearLayout llSendGift;
     @BindView(R.id.gift_layout_1)
     GiftLayout giftLayout1;
-//    @BindView(R.id.gift_layout_2)
-//    GiftLayout giftLayout2;
-//    @BindView(R.id.gift_layout_3)
-//    GiftLayout giftLayout3;
+    @BindView(R.id.gift_layout_2)
+    GiftLayout giftLayout2;
+    @BindView(R.id.gift_layout_3)
+    GiftLayout giftLayout3;
 
     private int mDotSpace;
     private int mDotSize;
@@ -110,8 +110,8 @@ public class SendGiftActivity extends AppCompatActivity implements GiftFragment.
     private void initGiftLayout() {
         mGiftLayoutList = new ArrayList<>();
         mGiftLayoutList.add(giftLayout1.setValue(new SendGiftModel(0, false, new GiftEntity(-1, "", ""))));
-//        mGiftLayoutList.add(giftLayout2.setValue(new SendGiftModel(0, false, new GiftEntity(-1, "", ""))));
-//        mGiftLayoutList.add(giftLayout3.setValue(new SendGiftModel(0, false, new GiftEntity(-1, "", ""))));
+        mGiftLayoutList.add(giftLayout2.setValue(new SendGiftModel(0, false, new GiftEntity(-1, "", ""))));
+        mGiftLayoutList.add(giftLayout3.setValue(new SendGiftModel(0, false, new GiftEntity(-1, "", ""))));
 
         giftLayout1.setmOnAnimatorListener(new GiftLayout.onAnimatorListener() {
             @Override
@@ -119,18 +119,18 @@ public class SendGiftActivity extends AppCompatActivity implements GiftFragment.
                 takeDataFromQueue();
             }
         });
-//        giftLayout2.setmOnAnimatorListener(new GiftLayout.onAnimatorListener() {
-//            @Override
-//            public void onAnimatorEnd() {
-//                takeDataFromQueue();
-//            }
-//        });
-//        giftLayout3.setmOnAnimatorListener(new GiftLayout.onAnimatorListener() {
-//            @Override
-//            public void onAnimatorEnd() {
-//                takeDataFromQueue();
-//            }
-//        });
+        giftLayout2.setmOnAnimatorListener(new GiftLayout.onAnimatorListener() {
+            @Override
+            public void onAnimatorEnd() {
+                takeDataFromQueue();
+            }
+        });
+        giftLayout3.setmOnAnimatorListener(new GiftLayout.onAnimatorListener() {
+            @Override
+            public void onAnimatorEnd() {
+                takeDataFromQueue();
+            }
+        });
     }
 
     private void initDots() {
@@ -278,32 +278,21 @@ public class SendGiftActivity extends AppCompatActivity implements GiftFragment.
             if (null == freeLayout) {
                 Log.e(TAG, "当前没有空闲的礼物动画位置");
                 // 更新队列中的内容
-//                synchronized (mQueue) {
-//                    int queueSize = mQueue.size();
-//                    // 若队列中最后一项中的giftId与要传入的相同，则直接giftNum加1；
-//                    // 否则添加一个新对象至队列中
-//                    if (queueSize > 0) {
-//                        if (mQueue.get(queueSize - 1).getGiftEntity().getGiftId() == giftId) {
-//                            mQueue.get(queueSize - 1).setGiftNum(mQueue.get(queueSize - 1).getGiftNum() + 1);
-//                            Log.e(TAG, "在原基础上增加，currNum = " + mQueue.get(queueSize - 1).getGiftNum());
-//                            return;
-//                        }
-//                    }
-//                    Log.e(TAG, "添加了一个新对象到队列中");
-//                    mQueue.add(new SendGiftModel(1, true, new GiftEntity(giftId, "礼物名称", "")));
-//                }
-                int queueSize = mQueue.size();
-                // 若队列中最后一项中的giftId与要传入的相同，则直接giftNum加1；
-                // 否则添加一个新对象至队列中
-                if (queueSize > 0) {
-                    if (mQueue.get(queueSize - 1).getGiftEntity().getGiftId() == giftId) {
-                        mQueue.get(queueSize - 1).setGiftNum(mQueue.get(queueSize - 1).getGiftNum() + 1);
-                        Log.e(TAG, "在原基础上增加，currNum = " + mQueue.get(queueSize - 1).getGiftNum());
-                        return;
+                synchronized (mQueue) {
+                    int queueSize = mQueue.size();
+                    // 若队列中最后一项中的giftId与要传入的相同，则直接giftNum加1；
+                    // 否则添加一个新对象至队列中
+                    if (queueSize > 0) {
+                        if (mQueue.get(queueSize - 1).getGiftEntity().getGiftId() == giftId) {
+                            mQueue.get(queueSize - 1).setGiftNum(mQueue.get(queueSize - 1).getGiftNum() + 1);
+                            Log.e(TAG, "在原基础上增加，currNum = " + mQueue.get(queueSize - 1).getGiftNum());
+                            return;
+                        }
                     }
+                    Log.e(TAG, "添加了一个新对象到队列中");
+                    mQueue.add(new SendGiftModel(1, true, new GiftEntity(giftId, "礼物名称", "")));
                 }
-                Log.e(TAG, "添加了一个新对象到队列中");
-                mQueue.add(new SendGiftModel(1, true, new GiftEntity(giftId, "礼物名称", "")));
+
             } else {
                 // 当前位置空闲
                 Log.e(TAG, "当前位置空闲");

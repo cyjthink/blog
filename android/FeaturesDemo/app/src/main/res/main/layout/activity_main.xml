@@ -15,4 +15,10 @@
         android:layout_height="wrap_content"
         android:text="viewpager Gallery"
         android:id="@+id/btn_gallery"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SurfaceView广播"
+        android:id="@+id/btn_broadcast"/>
 </LinearLayout>

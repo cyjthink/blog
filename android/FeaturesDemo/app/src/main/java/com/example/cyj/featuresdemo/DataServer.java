@@ -1,5 +1,6 @@
 package com.example.cyj.featuresdemo;
 
+import com.example.cyj.featuresdemo.broadcast.BroadcastEntity;
 import com.example.cyj.featuresdemo.gift.entity.GiftEntity;
 import com.example.cyj.featuresdemo.gift.entity.SendGiftModel;
 
@@ -22,5 +23,13 @@ public class DataServer {
             mData.add(sendGiftModel);
         }
         return mData;
+    }
+
+    public static List<BroadcastEntity> getBroadcastEntityList() {
+        List<BroadcastEntity> list = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            list.add(new BroadcastEntity(0, "http://test-1252212268.coscd.myqcloud.com/home_treasure_btn_diamond.png", "第" + i + "条广播"));
+        }
+        return list;
     }
 }
