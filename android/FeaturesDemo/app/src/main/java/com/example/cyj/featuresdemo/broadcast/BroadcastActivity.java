@@ -3,9 +3,9 @@ package com.example.cyj.featuresdemo.broadcast;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.example.cyj.featuresdemo.R;
 
@@ -23,6 +23,8 @@ public class BroadcastActivity extends AppCompatActivity {
     BroadcastSurfaceView svBroadcast;
     @BindView(R.id.btn_add_broadcast)
     Button btnAddBroadcast;
+
+    public static final String TAG = BroadcastActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -47,12 +49,13 @@ public class BroadcastActivity extends AppCompatActivity {
 
             @Override
             public void onNextStart() {
-//                Toast.makeText(BroadcastActivity.this, "开始播放下一条", Toast.LENGTH_SHORT).show();
+                Log.e(TAG, "开始播放下一条");
             }
 
             @Override
             public void onFinish() {
-//                Toast.makeText(BroadcastActivity.this, "播放完毕", Toast.LENGTH_SHORT).show();
+                Log.e(TAG, "播放完毕");
+
             }
         };
         svBroadcast.setmOnBroadcastListener(listener);

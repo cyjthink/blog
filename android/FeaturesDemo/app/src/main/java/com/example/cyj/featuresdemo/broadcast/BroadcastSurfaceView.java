@@ -8,7 +8,6 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
@@ -178,7 +177,6 @@ public class BroadcastSurfaceView extends SurfaceView implements SurfaceHolder.C
             if (entity.getCurrPos() <= -DensityUtil.getTextWidth(entity.getContent(), mPaint)) {
                 finishPlayBroadcast(it);
                 mHandler.sendEmptyMessage(FINISH);
-                Log.e(TAG, "广播播放结束");
             }
             if (!it.hasNext()) {
                 mLastTargetPos = currPos;
@@ -189,7 +187,6 @@ public class BroadcastSurfaceView extends SurfaceView implements SurfaceHolder.C
         if (mLastTargetPos < mViewWidth * 0.75f) {
             checkBroadcastEntityList();
             mHandler.sendEmptyMessage(NEXT_START);
-            Log.e(TAG, "开始播放下一条广播");
         }
 
         mHolder.unlockCanvasAndPost(mCanvas);
