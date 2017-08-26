@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="mine_bg_title">#276397</color>
+    <color name="mine_bg_inital">#6ABAFE</color>
+    <color name="mine_bg_mark">#2F73A4</color>
+    <color name="mine_bg_clear">#D3DFEA</color>
+    <color name="mine_txt_num">#00C8AE</color>
+</resources>

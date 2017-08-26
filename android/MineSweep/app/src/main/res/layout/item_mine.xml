@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_mine"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical"
+    tools:background="@color/mine_bg_mark">
+
+    <ImageView
+        android:id="@+id/iv_mark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        tools:src="@drawable/mine_boom"
+        android:scaleType="center"/>
+
+    <TextView
+        android:id="@+id/tv_mark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="2"
+        android:textColor="@color/mine_txt_num"
+        android:textSize="@dimen/mine_num_txt_size"
+        android:textStyle="bold"
+        android:visibility="gone" />
+</LinearLayout>
