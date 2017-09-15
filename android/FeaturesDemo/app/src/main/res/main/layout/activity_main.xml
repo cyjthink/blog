@@ -7,6 +7,12 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="收到邀请动画"
+        android:id="@+id/btn_receive_invite"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="赠送礼物"
         android:id="@+id/btn_send_gift"/>
 

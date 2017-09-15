@@ -20,6 +20,7 @@
         <activity android:name=".gift.ui.SendGiftActivity"/>
         <activity android:name=".gallery.GalleryActivity"/>
         <activity android:name=".broadcast.BroadcastActivity"/>
+        <activity android:name=".invite.InviteActivity"/>
     </application>
 
 </manifest>

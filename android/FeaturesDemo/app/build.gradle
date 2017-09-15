@@ -20,6 +20,7 @@ android {
     sourceSets {
         main {
             res.srcDirs = [
+                    'src/main/res/invite',
                     'src/main/res/broadcast',
                     'src/main/res/gallery',
                     'src/main/res/gift',
