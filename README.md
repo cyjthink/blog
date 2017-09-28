@@ -13,3 +13,4 @@
 7. 黄金时代 ![progress](http://progressed.io/bar/100)
 8. App研发实录 ![progress](http://progressed.io/bar/100)
 6. 嗜书瘾君子 ![progress](http://progressed.io/bar/100)
+7. 故人故事 ![progress](http://progressed.io/bar/100)
