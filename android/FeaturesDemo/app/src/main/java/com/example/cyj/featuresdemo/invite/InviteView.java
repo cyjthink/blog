@@ -51,7 +51,9 @@ public class InviteView extends FrameLayout {
     private Runnable mExitRunnable = new Runnable() {
         @Override
         public void run() {
-            animatorOver();
+            if (mOnAnimatorListener != null) {
+                mOnAnimatorListener.onAnimatorOver();
+            }
         }
     };
 
@@ -70,7 +72,7 @@ public class InviteView extends FrameLayout {
     }
 
     private void init() {
-        View inviteView = LayoutInflater.from(getContext()).inflate(R.layout.part_invite, (ViewGroup) getParent(), false);
+        View inviteView = LayoutInflater.from(getContext()).inflate(R.layout.item_invite, (ViewGroup) getParent(), false);
         ivAvator = (ImageView) inviteView.findViewById(R.id.iv_avator);
         tvTitle = (TextView) inviteView.findViewById(R.id.tv_title);
         tvInfo = (TextView) inviteView.findViewById(R.id.tv_info);
@@ -84,8 +86,7 @@ public class InviteView extends FrameLayout {
             public void onClick(View v) {
                 if (mOnClickListener != null) {
                     // 点击时移除callback，直接进行动画结束操作
-                    mHandler.removeCallbacks(mExitRunnable);
-                    animatorOver();
+                    closeItem();
                     mOnClickListener.onIgnoreClick();
                 }
             }
@@ -95,8 +96,7 @@ public class InviteView extends FrameLayout {
             public void onClick(View v) {
                 if (mOnClickListener != null) {
                     // 点击时移除callback，直接进行动画结束操作
-                    mHandler.removeCallbacks(mExitRunnable);
-                    animatorOver();
+                    closeItem();
                     mOnClickListener.onRefuseClick();
                 }
             }
@@ -106,37 +106,31 @@ public class InviteView extends FrameLayout {
             public void onClick(View v) {
                 if (mOnClickListener != null) {
                     // 点击时移除callback，直接进行动画结束操作
-                    mHandler.removeCallbacks(mExitRunnable);
-                    animatorOver();
+                    closeItem();
                     mOnClickListener.onAcceptClick();
                 }
             }
         });
     }
 
-    public void setInfo(String title) {
-        tvTitle.setText(title);
-    }
-
     /**
-     * 开始播放礼物
+     * 开始显示布局，过duration秒之后移除布局
      *
      * @param duration 从动画开始到结束存在的时间
      */
-    public void animatorStart(long duration) {
-        // 将该操作至于activity中进行
-//        mIsShow = true;
+    public void delayCloseItem(long duration) {
         mHandler.postDelayed(mExitRunnable, duration);
     }
 
     /**
-     * 动画结束时
-     *
-     * @return
+     * 直接关闭
      */
-    public void animatorOver() {
-        if (mOnAnimatorListener != null) {
-            mOnAnimatorListener.onAnimatorOver();
+    public void closeItem() {
+        if (mIsShow) {
+            mHandler.removeCallbacks(mExitRunnable);
+            if (mOnAnimatorListener != null) {
+                mOnAnimatorListener.onAnimatorOver();
+            }
         }
     }
 

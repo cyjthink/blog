@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <TextView
-        android:id="@+id/tv_queue_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginBottom="10dp"
-        tools:text="queue count: 8"
-        android:textColor="@android:color/black" />
 
     <Button
         android:id="@+id/btn_click"
@@ -20,13 +10,4 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:text="click" />
-
-    <LinearLayout
-        android:id="@+id/ll_invites"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="100dp"
-        android:orientation="vertical" />
 </RelativeLayout>
