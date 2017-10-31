@@ -10,11 +10,11 @@ typedef struct
 {
 	ElemType data;
 	int cursor;
-} Component, StackList[MAX_SIZE];
+} Component, StaticList[MAX_SIZE];
 
 
 /* 初始化静态链表 */
-void InitList(StackList L)
+void InitList(StaticList L)
 {
 	int i;
 
@@ -27,7 +27,7 @@ void InitList(StackList L)
 }
 
 /* 静态链表长度 */
-int ListLength(StackList L)
+int ListLength(StaticList L)
 {
 	int length;
 	int i;
@@ -43,7 +43,7 @@ int ListLength(StackList L)
 }
 
 /* 分配空间 */
-int MallocComponent(StackList L)
+int MallocComponent(StaticList L)
 {
 	int i;
 
@@ -58,7 +58,7 @@ int MallocComponent(StackList L)
 }
 
 /* 将数据插入指定位置 */
-void InsertList(StackList L, int pos, ElemType data)
+void InsertList(StaticList L, int pos, ElemType data)
 {
 	int  j;
 	int k;
@@ -81,7 +81,7 @@ void InsertList(StackList L, int pos, ElemType data)
 }
 
 /* 释放空间 */
-void FreeComponent(StackList L, int pos)
+void FreeComponent(StaticList L, int pos)
 {
 	L[pos].cursor = L[0].cursor;
 	L[0].cursor = pos;
@@ -89,7 +89,7 @@ void FreeComponent(StackList L, int pos)
 }
 
 /* 删除指定位置数据 */
-void DeleteList(StackList L, int pos)
+void DeleteList(StaticList L, int pos)
 {
 	int j;
 	int k;
@@ -111,7 +111,7 @@ void DeleteList(StackList L, int pos)
 }
 
 /* 打印静态链表 */
-void TraverseList(StackList L)
+void TraverseList(StaticList L)
 {
 	int i;
 
@@ -128,7 +128,7 @@ void TraverseList(StackList L)
 
 int main()
 {
-	StackList L;
+	StaticList L;
 
 	InitList(L);
 	printf("初始化成功，此时length = %d\n", ListLength(L));
