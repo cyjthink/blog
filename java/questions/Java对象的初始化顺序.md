@@ -10,28 +10,28 @@
 ```java
 class A {
     private int a = 1; 			// 1
-    public static int b = 2;	// 2
+    public static int b = 2;		// 2
     
-    static {					// 3
+    static {				// 3
     }
     
-    {							// 4
+    {					// 4
     }
     
-    public A() {}				// 5
+    public A() {}			// 5
 }
 
 class B extends A {
     private int c = 3;			// 6
     public static int d = 4; 	// 7
     
-    static {					// 8
+    static {				// 8
     }
     
-    {							// 9
+    {					// 9
     }	
     
-	public B() {}				// 10
+	public B() {}			// 10
 }
 
 new B();
@@ -53,7 +53,9 @@ new B();
 
 ## 测试代码
 
-1. [代码地址](/code/init order/)
+1. [Log](code/java/init%20order/Log.java)
+2. [Base](code/java/init%20order/Base.java)
+3. [Extend](code/java/init%20order/Extend.java)
 
 ## 引用
 
