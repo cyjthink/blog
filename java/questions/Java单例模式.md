@@ -7,10 +7,10 @@
 - [双重校验锁](#双重校验锁)
 - [存在的问题](#存在的问题)
   - [存在多个类装载器](#存在多个类装载器)
-  - [实现了java.io.Serializable接口](#实现了java.io.Serializable接口)
+  - [实现了Serializable接口](#实现了Serializable接口)
 - [引用](#引用)
 
-##懒汉模式
+## 懒汉模式
 
 1. 线程不安全
 
@@ -48,7 +48,7 @@
    }
    ```
 
-##饿汉模式
+## 饿汉模式
 
 1. 饿汉模式
 
@@ -134,7 +134,7 @@ public class Singleton {
 }
 ```
 
-##存在的问题
+## 存在的问题
 
 ### 存在多个类装载器
 
@@ -148,7 +148,7 @@ public static Class getClass(String className) throws ClassNotFoundException {
 }
 ```
 
-### 实现了java.io.Serializable接口
+### 实现了Serializable接口
 
 ```java
 public static class Singleton implements Serializable {
