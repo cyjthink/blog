@@ -33,7 +33,7 @@
    // 3.方法结束后y将被回收
    ```
 
-2. 图示：[java_pass_by_value_1](../res/java_pass_by_value_1)
+2. 图示：[java_pass_by_value_1](/res/java_pass_by_value_1.jpg)
 
 ## 传递对象时
 
@@ -66,7 +66,7 @@
    // 3.方法结束后user被回收，而student指向的对象已经被改变
    ```
 
-2. 图示：[java_pass_by_value_2](../res/java_pass_by_value_2)
+2. 图示：[java_pass_by_value_2](/res/java_pass_by_value_2.jpg)
 
 ## 交换对象时
 
@@ -104,7 +104,7 @@
    // 3.更改user1\user2的指向对象，但都不影响student\teacher
    ```
 
-2. 图示：[java_pass_by_value_3](../res/java_pass_by_value_3)
+2. 图示：[java_pass_by_value_3](/res/java_pass_by_value_3.jpg)
 
 ## 结论
 
