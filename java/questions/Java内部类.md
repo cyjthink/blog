@@ -5,7 +5,7 @@
   - [在类中定义](#在类中定义)
   - [在作用域中定义](#在作用域中定义)
 - [使用场景](#使用场景)
-- [.this 与 .new 的使用](#.this 与 .new 的使用)
+- [.this&nbsp;与&nbsp;.new&nbsp;的使用](#.this&nbsp;与&nbsp;.new&nbsp;的使用)
 
 ## 定义
 
@@ -28,7 +28,7 @@
 1. 使用private内部类可禁止依赖类型编码，并将具体实现隐藏(普通类只有由public或default修饰)
 2. 匿名内部类：只使用一次的场景，如设置点击事件
 
-## .this 与 .new 的使用
+## .this&nbsp;与&nbsp;.new&nbsp;的使用
 
 1. 代码示例
 
