@@ -7,7 +7,7 @@
 
 ## 关系图示
 
-![](../res/java_CharSequence String StringBuilder StringBuffer relate.jpg)
+![](/res/java_CharSequence%20String%20StringBuilder%20StringBuffer%20relate.jpg)
 
 ## 区别
 
